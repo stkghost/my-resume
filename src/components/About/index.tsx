@@ -1,11 +1,38 @@
-import React from 'react';
-import { useTheme } from 'styled-components';
-import { StyledText } from '../StyledText';
-import * as S from './styles';
+import React from 'react'
+import { useTheme } from 'styled-components'
+import { StyledText } from '../StyledText'
+import { BiRightArrow } from 'react-icons/bi'
+import * as S from './styles'
 
 export const About: React.FC = () => {
-
   const theme = useTheme()
+
+  const skills = [
+    {
+      id: 1,
+      skill: 'JavaScript'
+    },
+    {
+      id: 2,
+      skill: 'React Js'
+    },
+    {
+      id: 3,
+      skill: 'React Native'
+    },
+    {
+      id: 4,
+      skill: 'TypeScript'
+    },
+    {
+      id: 5,
+      skill: 'CSS'
+    },
+    {
+      id: 6,
+      skill: 'HTML'
+    }
+  ]
 
   return (
     <S.Container>
@@ -39,6 +66,99 @@ export const About: React.FC = () => {
         align="left"
         style={{ marginTop: '1.5rem' }}
       />
+
+      <S.AboutContainer id="about">
+        <S.AboutHeader>
+          <StyledText
+            text="01. "
+            fontSize={1.5}
+            color={theme.colors.blue_lemon}
+            isSerif
+            style={{ marginRight: '.8rem' }}
+          />
+          <StyledText
+            text="About Me"
+            fontSize={1.5}
+            color={theme.colors.white}
+            fontWeight={700}
+          />
+
+          <S.Separator />
+        </S.AboutHeader>
+
+        <S.Content>
+          <S.TextColumn>
+            <StyledText
+              text={`Hello! My name is Gabriel and I enjoy creating
+things that live on the internet.
+My interest in web development started back in 2016
+when i watch a TV documentary about a startup that developed apps.
+Using my smartphone and not knowing anything about how things
+are done on it made me create a curiosity that was only satisfied when I started my first programming course!`}
+              fontSize={1}
+              fontWeight={400}
+              color={theme.colors.silver_light}
+              align="left"
+              style={{ marginTop: '1.5rem', lineHeight: '1.4rem' }}
+            />
+            <StyledText
+              text={`Fast-forward to today, and I’ve had the privilege of working at
+real estate start-up and a legal tech start-up. My main focus these days is
+improve my knowledge with Mobile and Web development in the React ecosystem.
+
+
+I am also taking courses to get started in backend development
+with technologies like Elixir and NodeJs.
+
+              Here are a few technologies I’ve been working with recently:`}
+              fontSize={1}
+              fontWeight={400}
+              color={theme.colors.silver_light}
+              align="left"
+              style={{ marginTop: '1.5rem', lineHeight: '1.4rem' }}
+            />
+
+            <StyledText
+              text={`I am also taking courses to get started in backend development with technologies like Elixir and NodeJs.`}
+              fontSize={1}
+              fontWeight={400}
+              color={theme.colors.silver_light}
+              align="left"
+              style={{ marginTop: '1.5rem', lineHeight: '1.4rem' }}
+            />
+            <StyledText
+              text={`Here are a few technologies I’ve been working with recently:`}
+              fontSize={1}
+              fontWeight={400}
+              color={theme.colors.silver_light}
+              align="left"
+              style={{ marginTop: '1.5rem', lineHeight: '1.4rem' }}
+            />
+
+            <S.SkillsWrapper>
+              {skills.map(s => (
+                <S.SkillRow key={s.id}>
+                  <BiRightArrow color={theme.colors.blue_lemon} size={10} />
+                  <StyledText
+                    text={s.skill}
+                    fontSize={0.8}
+                    isSerif
+                    color={theme.colors.silver_light}
+                    style={{ letterSpacing: 2, marginLeft: '1rem' }}
+                  />
+                </S.SkillRow>
+              ))}
+            </S.SkillsWrapper>
+          </S.TextColumn>
+
+          <S.ImageColumn>
+            <S.MyPhoto
+              src="https://github.com/stkghost.png"
+              alt="Gabriel Souza"
+            />
+          </S.ImageColumn>
+        </S.Content>
+      </S.AboutContainer>
     </S.Container>
   )
 }

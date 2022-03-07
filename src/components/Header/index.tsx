@@ -1,10 +1,9 @@
-import React from 'react';
-import { useTheme } from 'styled-components';
-import { StyledText } from '../StyledText';
-import * as S from './styles';
+import React from 'react'
+import { useTheme } from 'styled-components'
+import { StyledText } from '../StyledText'
+import * as S from './styles'
 
 export const Header: React.FC = () => {
-
   const theme = useTheme()
 
   const buttons = [
@@ -44,14 +43,14 @@ export const Header: React.FC = () => {
 
       <S.NavBar>
         {buttons.map(btn => (
-          <S.ScrollBtn key={btn.id} to={btn.to}>
+          <S.ScrollBtn key={btn.id} to={btn.to} smooth={true}>
             <StyledText
               text={`0${btn.id}.`}
               fontSize={1.1}
               color={theme.colors.blue_lemon}
               isSerif
-            />
-            {' '}{btn.title}
+            />{' '}
+            {btn.title}
           </S.ScrollBtn>
         ))}
       </S.NavBar>

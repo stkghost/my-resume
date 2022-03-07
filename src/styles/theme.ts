@@ -1,7 +1,7 @@
 export default {
   colors: {
     white: '#fff',
-    silver_light: '#ffffffa8',
+    silver_light: 'rgba(255,255,255,0.6)',
     black_900: '#0A0A0A',
     blue_bg: '#0A192F',
     blue_500: '#090088',
