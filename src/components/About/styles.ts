@@ -5,6 +5,7 @@ const Animation = keyframes`${fadeInUp}`
 
 export const Container = styled.section`
   width: 100%;
+  max-width: 1200px;
   padding: 8rem 6rem 4rem 4rem;
   display: flex;
   flex-direction: column;
@@ -53,6 +54,7 @@ export const TextColumn = styled.div`
 export const ImageColumn = styled.div`
   width: 40%;
   height: 300px;
+  max-width: 350px;
   border-radius: 6px;
   display: flex;
   margin-top: 4rem;

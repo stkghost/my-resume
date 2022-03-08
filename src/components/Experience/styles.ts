@@ -5,6 +5,7 @@ const Animation = keyframes`${fadeInUp}`
 
 export const Container = styled.section`
   width: 100%;
+  max-width: 1200px;
   padding: 8rem 6rem 4rem 4rem;
   display: flex;
   flex-direction: column;
@@ -68,6 +69,7 @@ export const ExperienceContent = styled.div`
   align-items: flex-start;
   justify-content: center;
   width: 80%;
+  transition: 0.3s ease-in-out;
 `
 
 export const ExperienceRow = styled.div`

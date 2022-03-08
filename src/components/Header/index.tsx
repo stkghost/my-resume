@@ -19,8 +19,8 @@ export const Header: React.FC = () => {
     },
     {
       id: 3,
-      title: 'Skills',
-      to: 'about'
+      title: 'Projects',
+      to: 'projects'
     },
     {
       id: 4,
