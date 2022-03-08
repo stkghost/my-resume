@@ -1,12 +1,9 @@
 import React from 'react';
 import { FiGithub, FiInstagram, FiLinkedin } from 'react-icons/fi';
 import { ImWhatsapp } from 'react-icons/im';
-import { useTheme } from 'styled-components';
 import * as S from './styles';
 
 export const ContactSide: React.FC = () => {
-
-  const theme = useTheme()
 
   const items = [
     {
