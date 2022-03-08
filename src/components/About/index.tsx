@@ -1,7 +1,8 @@
-import React from 'react'
+import Aos from 'aos'
+import React, { useEffect } from 'react'
+import { BiRightArrow } from 'react-icons/bi'
 import { useTheme } from 'styled-components'
 import { StyledText } from '../StyledText'
-import { BiRightArrow } from 'react-icons/bi'
 import * as S from './styles'
 
 export const About: React.FC = () => {
@@ -31,8 +32,22 @@ export const About: React.FC = () => {
     {
       id: 6,
       skill: 'HTML'
+    },
+    {
+      id: 7,
+      skill: 'Next Js'
+    },
+    {
+      id: 8,
+      skill: 'Angular'
     }
   ]
+
+  useEffect(() => {
+    Aos.init({
+      duration: 1500
+    })
+  }, [])
 
   return (
     <S.Container>
@@ -67,7 +82,7 @@ export const About: React.FC = () => {
         style={{ marginTop: '1.5rem' }}
       />
 
-      <S.AboutContainer id="about">
+      <S.AboutContainer id="about" >
         <S.AboutHeader>
           <StyledText
             text="01. "
@@ -151,7 +166,7 @@ with technologies like Elixir and NodeJs.
             </S.SkillsWrapper>
           </S.TextColumn>
 
-          <S.ImageColumn>
+          <S.ImageColumn data-aos="fade-up">
             <S.MyPhoto
               src="https://github.com/stkghost.png"
               alt="Gabriel Souza"

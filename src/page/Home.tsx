@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { About } from '../components/About'
+import { Experience } from '../components/Experience'
 import { Header } from '../components/Header'
 
 const Container = styled.div`
@@ -11,8 +12,8 @@ export const Home: React.FC = () => {
   return (
     <Container>
       <Header />
-
       <About />
+      <Experience />
     </Container>
   )
 }

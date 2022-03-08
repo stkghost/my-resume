@@ -4,6 +4,8 @@ export default {
     silver_light: 'rgba(255,255,255,0.6)',
     black_900: '#0A0A0A',
     blue_bg: '#0A192F',
+    bg_opacity: '#112240',
+    blue_300: '#233554',
     blue_500: '#090088',
     blue_400: '#0099cc',
     blue_200: '#66ccff',
