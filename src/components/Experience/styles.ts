@@ -11,6 +11,10 @@ export const Container = styled.section`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+
+  @media (max-width: 768px) {
+    padding: 4rem 1rem 2rem 1rem;
+  }
 `
 export const Header = styled.div`
   width: 100%;
@@ -32,6 +36,11 @@ export const Content = styled.div`
   align-items: flex-start;
   padding: 2rem 0;
   animation: 1s ${Animation};
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `
 
 export const NavBar = styled.div`
@@ -41,6 +50,13 @@ export const NavBar = styled.div`
   align-items: flex-start;
   align-items: center;
   margin-right: 2rem;
+
+  @media (max-width: 768px) {
+    margin-right: 0;
+    margin-bottom: 2rem;
+    flex-direction: row;
+    width: 80%;
+  }
 `
 
 export const NavButton = styled.button<{ isActive: boolean }>`
@@ -51,6 +67,7 @@ export const NavButton = styled.button<{ isActive: boolean }>`
   border-left: 2px solid;
   border-left-color: ${({ theme }) => theme.colors.blue_300};
   background: transparent;
+
   ${({ theme, isActive }) =>
     isActive &&
     css`
@@ -60,6 +77,13 @@ export const NavButton = styled.button<{ isActive: boolean }>`
 
   &:hover {
     background: ${({ theme }) => theme.colors.bg_opacity};
+  }
+
+  @media (max-width: 768px) {
+    border-left: none;
+    border-bottom: 2px solid;
+    border-bottom-color: ${({ theme, isActive }) =>
+      isActive ? theme.colors.blue_lemon : theme.colors.bg_opacity};
   }
 `
 

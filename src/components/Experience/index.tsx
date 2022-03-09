@@ -68,7 +68,7 @@ export const Experience: React.FC = () => {
         <S.Separator />
       </S.Header>
 
-      <S.Content data-aos="fade-up">
+      <S.Content>
           <S.NavBar>
             <S.NavButton isActive={active === 'macohin'} onClick={() => handleExperience('macohin')}>
               <StyledText

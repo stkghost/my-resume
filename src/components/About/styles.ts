@@ -11,6 +11,10 @@ export const Container = styled.section`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+
+  @media (max-width: 768px) {
+    padding: 4rem 1rem 2rem 1rem;
+  }
 `
 
 export const AboutContainer = styled.div`
@@ -41,6 +45,10 @@ export const Content = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `
 
 export const TextColumn = styled.div`
@@ -49,12 +57,17 @@ export const TextColumn = styled.div`
   display: flex;
   flex-direction: column;
   animation: 1s ${Animation};
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 2rem 1rem 0 0;
+  }
 `
 
 export const ImageColumn = styled.div`
   width: 40%;
   height: 300px;
-  max-width: 350px;
+  max-width: 320px;
   border-radius: 6px;
   display: flex;
   margin-top: 4rem;
@@ -73,6 +86,9 @@ export const ImageColumn = styled.div`
     border-radius: 6px;
     z-index: 0;
     animation: 1s ${Animation};
+  }
+  @media (max-width: 768px) {
+    width: 100%;
   }
 `
 

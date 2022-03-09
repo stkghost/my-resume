@@ -8,6 +8,10 @@ export const Container = styled.section`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+
+  @media (max-width: 768px) {
+    padding: 4rem 1rem 5rem 1rem;
+  }
 `
 export const Header = styled.div`
   width: 100%;

@@ -14,6 +14,9 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   padding: 0 2rem;
+  @media (max-width: 768px) {
+    padding: 0 1rem;
+  }
 `
 
 export const Home: React.FC = () => {

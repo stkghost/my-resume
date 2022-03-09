@@ -13,6 +13,7 @@ interface IStyledTextProps extends HTMLAttributes<HTMLParagraphElement> {
 }
 
 const Text = styled.p<IStyledTextProps>`
+
   display: flex;
   font-family: ${({isSerif}) => !isSerif ? `"Roboto", sans-serif` : `'Zilla Slab', serif`};
   font-size: ${({ fontSize }) => `${fontSize}rem`};
@@ -22,6 +23,10 @@ const Text = styled.p<IStyledTextProps>`
   text-transform: ${({ transform }) => transform};
   line-height: ${({ lineHeight }) => `${lineHeight}rem`};
   letter-spacing: 0.8px;
+
+  @media (max-width: 768px) {
+    font-size: ${({ fontSize }) => fontSize > 1.6 && `${fontSize / 1.5}rem`};
+  }
 `;
 
 export const StyledText: React.FC<IStyledTextProps> = ({

@@ -11,6 +11,10 @@ export const Container = styled.div`
   left: 0;
   bottom: 0;
   padding-left: 1rem;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `
 
 export const IconWrapper = styled.a`

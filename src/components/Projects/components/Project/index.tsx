@@ -16,20 +16,21 @@ interface IProject {
     github?: string;
     link?: string;
   }
+  reverse?: boolean;
 }
 
-export const Project: React.FC<IProject> = ({ project }) => {
+export const Project: React.FC<IProject> = ({ project, reverse }) => {
 
   const theme = useTheme()
 
   return (
     <S.Container>
-      <S.ImgOverlay />
+      <S.ImgOverlay reverse={reverse}/>
 
-      <S.ProjectImgWrapper>
+      <S.ProjectImgWrapper reverse={reverse}>
         <S.ProjectImg src={project.img}/>
       </S.ProjectImgWrapper>
-      <S.Content>
+      <S.Content reverse={reverse}>
         <StyledText
           text="Features Project"
           fontSize={1}
@@ -55,7 +56,7 @@ export const Project: React.FC<IProject> = ({ project }) => {
             fontSize={1}
             fontWeight={400}
             color={theme.colors.silver_light}
-            align="right"
+            align={reverse ? 'right' : 'left'}
           />
         </S.ContentCard>
 
@@ -66,9 +67,9 @@ export const Project: React.FC<IProject> = ({ project }) => {
               text={item}
               fontSize={.9}
               fontWeight={400}
-              color={theme.colors.silver_light}
+              color={theme.colors.blue_lemon}
               isSerif
-              style={{ marginLeft: 12 }}
+              style={{ marginLeft: 12, marginBottom: 6 }}
             />
           ))}
         </S.ItemsRow>
