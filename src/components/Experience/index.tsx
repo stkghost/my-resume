@@ -52,7 +52,7 @@ export const Experience: React.FC = () => {
     <S.Container id="experience">
       <S.Header>
         <StyledText
-          text="01. "
+          text="02. "
           fontSize={1.5}
           color={theme.colors.blue_lemon}
           isSerif

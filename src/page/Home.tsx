@@ -4,6 +4,7 @@ import { About } from '../components/About'
 import { ContactSide } from '../components/ContactSide'
 import { Experience } from '../components/Experience'
 import { Header } from '../components/Header'
+import { Projects } from '../components/Projects'
 
 const Container = styled.div`
   position: relative;
@@ -12,6 +13,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 0 2rem;
 `
 
 export const Home: React.FC = () => {
@@ -21,6 +23,7 @@ export const Home: React.FC = () => {
       <Header />
       <About />
       <Experience />
+      <Projects />
     </Container>
   )
 }
