@@ -13,7 +13,11 @@ export const Container = styled.div`
   padding-left: 1rem;
 
   @media (max-width: 768px) {
-    display: none;
+    width: 100%;
+    position: relative;
+    flex-direction: row;
+    height: 100%;
+    padding: 0 4rem 1rem 4rem;
   }
 `
 
@@ -29,10 +33,18 @@ export const IconWrapper = styled.a`
     color: ${({ theme }) => theme.colors.blue_lemon};
     transform: translateY(-10px);
   }
+
+  @media (max-width: 768px) {
+    width: 20px;
+  }
 `
 
 export const Line = styled.div`
   width: 1px;
   background-color: ${({ theme }) => theme.colors.silver_light};
   height: 180px;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `

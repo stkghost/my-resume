@@ -1,10 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { VscChromeClose, VscListSelection } from 'react-icons/vsc'
 import { useTheme } from 'styled-components'
 import { StyledText } from '../StyledText'
 import * as S from './styles'
 
-export const Header: React.FC = () => {
+interface IProps {
+  open: boolean
+  setOpen: React.Dispatch<React.SetStateAction<boolean>>
+}
+
+export const Header: React.FC<IProps> = ({open, setOpen}) => {
   const theme = useTheme()
+
+  const [ navBar, setNavbar] = useState(true)
 
   const buttons = [
     {
@@ -25,12 +33,26 @@ export const Header: React.FC = () => {
     {
       id: 4,
       title: 'Contact',
-      to: 'about'
+      to: 'contact'
     }
   ]
 
+  const handleOpen = () => {
+    setOpen(!open)
+  }
+
+  const navbarChangeColor = () => {
+    if (window.scrollY >= 80) {
+        setNavbar(true)
+    } else {
+        setNavbar(false)
+    }
+}
+
+window.addEventListener('scroll', navbarChangeColor)
+
   return (
-    <S.Container>
+    <S.Container style={{ display: navBar ? 'none' : 'flex' }}>
       <S.LogoWrapper>
         <StyledText
           text="GS"
@@ -54,6 +76,13 @@ export const Header: React.FC = () => {
           </S.ScrollBtn>
         ))}
       </S.NavBar>
+      <S.IconWrapper onClick={handleOpen}>
+        {!open ? (
+          <VscChromeClose size={30} color={theme.colors.blue_lemon}/>
+        ) : (
+          <VscListSelection size={30} color={theme.colors.blue_lemon}/>
+        )}
+      </S.IconWrapper>
     </S.Container>
   )
 }

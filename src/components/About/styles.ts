@@ -13,7 +13,7 @@ export const Container = styled.section`
   justify-content: center;
 
   @media (max-width: 768px) {
-    padding: 4rem 1rem 2rem 1rem;
+    padding: 6rem 1rem 2rem 1rem;
   }
 `
 

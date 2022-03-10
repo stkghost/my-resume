@@ -28,6 +28,8 @@ export const ContactSide: React.FC = () => {
     }
   ]
 
+  const currentYear = new Date().getFullYear()
+
   return (
     <S.Container>
       {items.map(item => (

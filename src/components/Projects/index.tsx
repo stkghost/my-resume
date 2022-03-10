@@ -48,7 +48,7 @@ export const Projects: React.FC = () => {
   ]
 
   return (
-    <S.Container>
+    <S.Container id="projects">
       <S.Header>
         <StyledText
           text="03. "

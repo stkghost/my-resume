@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { About } from '../components/About'
-import { ContactSide } from '../components/ContactSide'
 import { Experience } from '../components/Experience'
+import { Footer } from '../components/Footer'
 import { Header } from '../components/Header'
 import { Projects } from '../components/Projects'
+import { Sidebar } from '../components/Sidebar'
 
 const Container = styled.div`
   position: relative;
@@ -20,13 +21,17 @@ const Container = styled.div`
 `
 
 export const Home: React.FC = () => {
+
+  const [ open, setOpen ] = useState(false)
+
   return (
     <Container>
-      <ContactSide />
-      <Header />
+      <Sidebar open={open} setOpen={setOpen}/>
+      <Header open={open} setOpen={setOpen}/>
       <About />
       <Experience />
       <Projects />
+      <Footer />
     </Container>
   )
 }
