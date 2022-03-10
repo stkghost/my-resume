@@ -25,7 +25,7 @@ export const Home: React.FC = () => {
   const [ open, setOpen ] = useState(false)
 
   return (
-    <Container>
+    <Container >
       <Sidebar open={open} setOpen={setOpen}/>
       <Header open={open} setOpen={setOpen}/>
       <About />

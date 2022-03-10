@@ -26,6 +26,7 @@ export const IconWrapper = styled.button`
   transform: rotate(180deg);
   border: none;
   background-color: transparent;
+  z-index: 9999;
 
   @media (min-width: 768px) {
     display: none;

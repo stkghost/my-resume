@@ -77,7 +77,7 @@ window.addEventListener('scroll', navbarChangeColor)
         ))}
       </S.NavBar>
       <S.IconWrapper onClick={handleOpen}>
-        {!open ? (
+        {open ? (
           <VscChromeClose size={30} color={theme.colors.blue_lemon}/>
         ) : (
           <VscListSelection size={30} color={theme.colors.blue_lemon}/>
