@@ -82,7 +82,7 @@ export const About: React.FC = () => {
         style={{ marginTop: '1.5rem' }}
       />
 
-      <S.AboutContainer id="about" >
+      <S.AboutContainer id="about">
         <S.AboutHeader>
           <StyledText
             text="01. "
@@ -117,8 +117,7 @@ are done on it made me create a curiosity that was only satisfied when I started
               style={{ marginTop: '1.5rem', lineHeight: '1.4rem' }}
             />
             <StyledText
-              text={`Fast-forward to today, and I’ve had the privilege of working at
-real estate start-up and a legal tech start-up. My main focus these days is
+              text={`I am currently working in an IT consulting company as a systems analyst, working on an insurance project for one of the largest banks in the country.. My main focus these days is
 improve my knowledge with Mobile and Web development in the React ecosystem.
 
 
@@ -126,23 +125,6 @@ I am also taking courses to get started in backend development
 with technologies like Elixir and NodeJs.
 
               Here are a few technologies I’ve been working with recently:`}
-              fontSize={1}
-              fontWeight={400}
-              color={theme.colors.silver_light}
-              align="left"
-              style={{ marginTop: '1.5rem', lineHeight: '1.4rem' }}
-            />
-
-            <StyledText
-              text={`I am also taking courses to get started in backend development with technologies like Elixir and NodeJs.`}
-              fontSize={1}
-              fontWeight={400}
-              color={theme.colors.silver_light}
-              align="left"
-              style={{ marginTop: '1.5rem', lineHeight: '1.4rem' }}
-            />
-            <StyledText
-              text={`Here are a few technologies I’ve been working with recently:`}
               fontSize={1}
               fontWeight={400}
               color={theme.colors.silver_light}
