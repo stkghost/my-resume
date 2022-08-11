@@ -23,7 +23,7 @@ export const ContactSide: React.FC = () => {
     {
       id: 4,
       icon: <ImWhatsapp size={34} />,
-      link: 'https://api.whatsapp.com/send?phone=+5547999722189'
+      link: 'https://wa.me/5547999722189'
     }
   ]
 
