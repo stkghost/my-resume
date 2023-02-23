@@ -10,7 +10,7 @@ export const Projects: React.FC = () => {
   const projects = [
     {
       img: 'https://i.postimg.cc/5jWHsNJY/brasilseg.jpg',
-      title: 'Plataforma Ultron',
+      title: 'Ultron Platform',
       description:
         'Insurance platform of one of the largest banks in Brazil. I work as a Front-end engineer creating products, features and maintenance.',
       items: ['Javascript', 'React Js', 'LESS', 'Redux Saga', 'E2E Test'],
@@ -20,38 +20,56 @@ export const Projects: React.FC = () => {
       img: 'https://avatars.githubusercontent.com/u/73237565?s=200&v=4',
       title: 'DWV App',
       description:
-        'Application for realtors to view properties and buildings. Start up where I am currently working, creating features and applying maintenance to the application. We are currently rebuilding the app to React Native',
+        'Mobile App built with Ionic, where I had to maintence and create new features, React Native development for the new App. Dashboards, landing pages and web systems development using ReactJs and Next Js.',
       items: [
         'React Native',
-        'Angular Js',
-        'Typescript',
+        'Next Js',
+        'React Js',
         'Ionic',
-        'Electron',
-        'Mobile'
+        'Typescript',
+        'Electron'
       ],
       link: 'https://play.google.com/store/apps/details?id=com.dwvinterativa.app'
     },
+    // {
+    //   img: 'https://thumbs2.imgbox.com/37/8f/MIxD7r8o_t.png',
+    //   title: 'Law Firm Website',
+    //   description:
+    //     'Law Firm website build with React Js. In this one I am managing a campaign on google ads',
+    //   items: ['React JS', 'styled-components', 'Javascript', 'Firebase'],
+    //   link: 'https://amandamagalhaesadv.com.br'
+    // },
+    // {
+    //   img: 'https://thumbs2.imgbox.com/69/2a/WNbiR1ZI_t.png',
+    //   title: 'Product Landing Page',
+    //   description:
+    //     'Landing Page build with React Js. Landing page for product linking payment methods',
+    //   items: [
+    //     'React JS',
+    //     'styled-components',
+    //     'Javascript',
+    //     'Firebase',
+    //     'Yampi'
+    //   ],
+    //   link: 'https://dreamwaffle.com'
+    // },
     {
-      img: 'https://thumbs2.imgbox.com/37/8f/MIxD7r8o_t.png',
-      title: 'Law Firm Website',
+      img: 'https://iili.io/HM9zxgj.png',
+      title: 'React State CMS',
       description:
-        'Law Firm website build with React Js. In this one I am managing a campaign on google ads',
-      items: ['React JS', 'styled-components', 'Javascript', 'Firebase'],
-      link: 'https://amandamagalhaesadv.com.br'
-    },
-    {
-      img: 'https://thumbs2.imgbox.com/69/2a/WNbiR1ZI_t.png',
-      title: 'Product Landing Page',
-      description:
-        'Landing Page build with React Js. Landing page for product linking payment methods',
+        'Current working in a Real State Website CRM, build using Next Js using the newest web development tools. Building a CMS to manage the website with both Frontend and Backend using Next Js and Node Js',
       items: [
-        'React JS',
+        'Next JS',
         'styled-components',
-        'Javascript',
-        'Firebase',
-        'Yampi'
+        'Typescript',
+        'Vercel',
+        'Node Js',
+        'Express',
+        'TypeORM',
+        'Postgres',
+        'AWS'
       ],
-      link: 'https://dreamwaffle.com'
+      link: 'https://sigasoft.vercel.app'
     },
     {
       img: 'https://thumbs2.imgbox.com/9d/76/mkNZJ0tj_t.png',

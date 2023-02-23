@@ -31,7 +31,7 @@ export const Experience: React.FC = () => {
         'Web Development in React Js and Next Js.',
         'Mobile app maintenance built on Ionic.',
         'Full mobile app development built on React Native',
-        'Backend consumption using REST Api and GraphQl.'
+        'Backend integration using REST Api and GraphQl.'
       ]
     },
     {
@@ -42,7 +42,7 @@ export const Experience: React.FC = () => {
       date: 'April 2022 - current',
       topics: [
         'Web Development in React Js.',
-        'Backend consumption using REST Api.',
+        'Backend integration using REST Api.',
         'Requirements analysis and systems architecture.'
       ]
     }

@@ -39,7 +39,15 @@ export const About: React.FC = () => {
     },
     {
       id: 8,
-      skill: 'Angular'
+      skill: 'Node Js'
+    },
+    {
+      id: 9,
+      skill: 'Postgres'
+    },
+    {
+      id: 10,
+      skill: 'AWS'
     }
   ]
 
@@ -109,7 +117,7 @@ things that live on the internet.
 My interest in web development started back in 2016
 when i watch a TV documentary about a startup that developed apps.
 Using my smartphone and not knowing anything about how things
-are done on it made me create a curiosity that was only satisfied when I started my first programming course!`}
+are done on it made me create a curiosity that was only satisfied when I started my first programming course.`}
               fontSize={1}
               fontWeight={400}
               color={theme.colors.silver_light}
@@ -117,12 +125,16 @@ are done on it made me create a curiosity that was only satisfied when I started
               style={{ marginTop: '1.5rem', lineHeight: '1.4rem' }}
             />
             <StyledText
-              text={`I am currently working in an IT consulting company as a systems analyst, working on an insurance project for one of the largest banks in the country.. My main focus these days is
+              text={`I am currently working in an IT consulting company as a systems analyst, working on an insurance project for one of the largest banks in the country. My main focus these days is
 improve my knowledge with Mobile and Web development in the React ecosystem.
 
 
 I am also taking courses to get started in backend development
-with technologies like Elixir and NodeJs.
+with technologies like NodeJs.
+
+Overall, I am passionate about frontend development and am committed to staying up-to-date with the latest technologies and best practices in the field.
+ I believe that my combination of technical skills and creative problem-solving abilities make me a great programmer.
+
 
               Here are a few technologies I’ve been working with recently:`}
               fontSize={1}
