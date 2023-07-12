@@ -4,11 +4,21 @@ import { StyledText } from '../StyledText'
 import { Project } from './components/Project'
 import * as S from './styles'
 
+interface IProjectsProps {
+  id: number
+  img: string
+  title: string
+  description: string
+  items: string[]
+  link: string
+}
+
 export const Projects: React.FC = () => {
   const theme = useTheme()
 
-  const projects = [
+  const projects: IProjectsProps[] = [
     {
+      id: 1,
       img: 'https://i.postimg.cc/5jWHsNJY/brasilseg.jpg',
       title: 'Ultron Platform',
       description:
@@ -17,6 +27,7 @@ export const Projects: React.FC = () => {
       link: 'https://www.bbseguros.com.br'
     },
     {
+      id: 2,
       img: 'https://avatars.githubusercontent.com/u/73237565?s=200&v=4',
       title: 'DWV App',
       description:
@@ -25,39 +36,18 @@ export const Projects: React.FC = () => {
         'React Native',
         'Next Js',
         'React Js',
-        'Ionic',
+        'Angular',
         'Typescript',
-        'Electron'
+        'Ionic'
       ],
       link: 'https://play.google.com/store/apps/details?id=com.dwvinterativa.app'
     },
-    // {
-    //   img: 'https://thumbs2.imgbox.com/37/8f/MIxD7r8o_t.png',
-    //   title: 'Law Firm Website',
-    //   description:
-    //     'Law Firm website build with React Js. In this one I am managing a campaign on google ads',
-    //   items: ['React JS', 'styled-components', 'Javascript', 'Firebase'],
-    //   link: 'https://amandamagalhaesadv.com.br'
-    // },
-    // {
-    //   img: 'https://thumbs2.imgbox.com/69/2a/WNbiR1ZI_t.png',
-    //   title: 'Product Landing Page',
-    //   description:
-    //     'Landing Page build with React Js. Landing page for product linking payment methods',
-    //   items: [
-    //     'React JS',
-    //     'styled-components',
-    //     'Javascript',
-    //     'Firebase',
-    //     'Yampi'
-    //   ],
-    //   link: 'https://dreamwaffle.com'
-    // },
     {
+      id: 3,
       img: 'https://iili.io/HM9zxgj.png',
-      title: 'React State CMS',
+      title: 'Real Estate Websystem',
       description:
-        'Current working in a Real State Website CRM, build using Next Js using the newest web development tools. Building a CMS to manage the website with both Frontend and Backend using Next Js and Node Js',
+        'Real Estate Website CMS, built using Next Js with the newest web development tools. Building a new API to manage the website content, such as footer components, headers, colors. The whole website is customized. Project made with Next js in Frontend and Node Js in Backend.',
       items: [
         'Next JS',
         'styled-components',
@@ -69,9 +59,10 @@ export const Projects: React.FC = () => {
         'Postgres',
         'AWS'
       ],
-      link: 'https://sigasoft.vercel.app'
+      link: 'https://requinte.sigastrcms.com'
     },
     {
+      id: 4,
       img: 'https://thumbs2.imgbox.com/9d/76/mkNZJ0tj_t.png',
       title: 'Dynamic Website',
       description:
@@ -86,6 +77,7 @@ export const Projects: React.FC = () => {
       link: 'https://hotsite.dwvapp.com.br/empreendimento/130685/NXkP1avpDY'
     },
     {
+      id: 5,
       img: 'https://thumbs2.imgbox.com/64/56/mc6tmBQa_t.png',
       title: 'PDF Generator',
       description:
@@ -117,7 +109,11 @@ export const Projects: React.FC = () => {
 
       <S.Content>
         {projects.map((project, index) => (
-          <Project key={index} project={project} reverse={index % 2 === 0} />
+          <Project
+            key={`${project.id}-${index}`}
+            project={project}
+            reverse={index % 2 === 0}
+          />
         ))}
       </S.Content>
     </S.Container>

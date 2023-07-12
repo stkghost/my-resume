@@ -3,18 +3,19 @@ import { VscChromeClose, VscListSelection } from 'react-icons/vsc'
 import { useTheme } from 'styled-components'
 import { StyledText } from '../StyledText'
 import * as S from './styles'
+import { IButtonsProps } from '../../types/buttons'
 
 interface IProps {
   open: boolean
   setOpen: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-export const Header: React.FC<IProps> = ({open, setOpen}) => {
+export const Header: React.FC<IProps> = ({ open, setOpen }) => {
   const theme = useTheme()
 
-  const [ navBar, setNavbar] = useState(true)
+  const [navBar, setNavbar] = useState(true)
 
-  const buttons = [
+  const buttons: IButtonsProps[] = [
     {
       id: 1,
       title: 'About',
@@ -43,13 +44,13 @@ export const Header: React.FC<IProps> = ({open, setOpen}) => {
 
   const navbarChangeColor = () => {
     if (window.scrollY >= 80) {
-        setNavbar(true)
+      setNavbar(true)
     } else {
-        setNavbar(false)
+      setNavbar(false)
     }
-}
+  }
 
-window.addEventListener('scroll', navbarChangeColor)
+  window.addEventListener('scroll', navbarChangeColor)
 
   return (
     <S.Container style={{ display: navBar ? 'none' : 'flex' }}>
@@ -78,9 +79,9 @@ window.addEventListener('scroll', navbarChangeColor)
       </S.NavBar>
       <S.IconWrapper onClick={handleOpen}>
         {open ? (
-          <VscChromeClose size={30} color={theme.colors.blue_lemon}/>
+          <VscChromeClose size={30} color={theme.colors.blue_lemon} />
         ) : (
-          <VscListSelection size={30} color={theme.colors.blue_lemon}/>
+          <VscListSelection size={30} color={theme.colors.blue_lemon} />
         )}
       </S.IconWrapper>
     </S.Container>

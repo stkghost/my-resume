@@ -5,10 +5,19 @@ import { useTheme } from 'styled-components'
 import { StyledText } from '../StyledText'
 import * as S from './styles'
 
+interface IExperiencesProps {
+  id: number
+  identifier: string
+  name: string
+  title: string
+  date: string
+  topics: string[]
+}
+
 export const Experience: React.FC = () => {
   const [active, setActive] = useState('macohin')
 
-  const experiences = [
+  const experiences: IExperiencesProps[] = [
     {
       id: 1,
       identifier: 'macohin',
