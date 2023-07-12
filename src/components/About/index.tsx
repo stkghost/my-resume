@@ -125,7 +125,7 @@ are done on it made me create a curiosity that was only satisfied when I started
               style={{ marginTop: '1.5rem', lineHeight: '1.4rem' }}
             />
             <StyledText
-              text={`I am currently working in an IT consulting company as a systems analyst, working on an insurance project for one of the largest banks in the country. My main focus these days is
+              text={`I am currently working in an IT consulting company as a systems analyst, working in an insurance project for one of the largest banks in the country. My main focus these days is
 improve my knowledge with Mobile and Web development in the React ecosystem.
 
 
@@ -134,7 +134,6 @@ with technologies like NodeJs.
 
 Overall, I am passionate about frontend development and am committed to staying up-to-date with the latest technologies and best practices in the field.
  I believe that my combination of technical skills and creative problem-solving abilities make me a great programmer.
-
 
               Here are a few technologies I’ve been working with recently:`}
               fontSize={1}
